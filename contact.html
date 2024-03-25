@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact - Kansas</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Contact Us</h1>
+        </header>
+        <nav class="topnav">
+            <a href="index.html">Home</a>
+            <a href="capital.html">Capital</a>
+            <a href="wichita.html">Wichita</a>
+            <a href="manhattan.html">Manhattan</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+      
+        <div class="container">
+            <section class="mainsec">
+                <form id="contactForm">
+                    <label for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName" placeholder="Your first name"><br>
+
+                    <label for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName" placeholder="Your last name"><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Your email"><br>
+
+                    <label for="confirmEmail">Confirm Email:</label><br>
+                    <input type="email" id="confirmEmail" name="confirmEmail" placeholder="Confirm your email"><br>
+
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" placeholder="Your message"></textarea><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </div>
+
+        <aside class="mainaside">
+            <h3>Visit Kansas</h3>
+                <p>We have a lot to offer. Unique food, lots of events, and tons of wildlife to explore! Fill out the contact info to get ahold of a personal guide.
+                </p>
+
+        <aside class="sources" id="special-section">
+            <h2>Sources</h2>
+            <ul>
+                <li>https://en.wikipedia.org/wiki/Manhattan,_Kansas</li>
+                <li>https://en.wikipedia.org/wiki/Wichita,_Kansas</li>
+                <li>https://en.wikipedia.org/wiki/Topeka,_Kansas</li>
+                <li>https://en.wikipedia.org/wiki/Kansas</li>
+
+            </ul>
+        </aside>
+
+        <div>
+            <div class="image-container">
+                <img src="comevisit.png" alt="Come visit us">
+            </div>
+        <script>
+            document.getElementById('contactForm').onsubmit = function(event) {
+                var email = document.getElementById('email').value;
+                var confirmEmail = document.getElementById('confirmEmail').value;
+
+                if (email !== confirmEmail) {
+                    alert("The email addresses do not match.");
+                    event.preventDefault();
+                }
+            };
+        </script>
+    </body>
+</html>
